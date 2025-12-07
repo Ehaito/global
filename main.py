@@ -53,6 +53,7 @@ def reply(message):
         send = bot.send_message(message.chat.id,f"Отправляй голосовое а я переведу его в текст! Круто,да?",reply_markup=markup)
         bot.register_next_step_handler(send,get_voice)
     if message.text == "Полезные статьи":
+        global markup
         bot.send_message(message.chat.id,f"Статья на Wikipedia:https://ru.wikipedia.org/wiki/Глобальное_потепление\nСтатья ООН:https://www.un.org/ru/global-issues/climate-change\nСтатья от Яндекс:https://yandex.ru/pogoda/ru/blog/globalnoe-poteplenie\nСюжет от РБК:https://www.rbc.ru/story/66b4a5ce9a79473cb11c638d\nСоветы по борьбе с глобальныйм потеплением:https://ru.wikihow.com/бороться-с-глобальным-потеплением",reply_markup=markup)
 
 
@@ -83,6 +84,7 @@ def get_voice(message):
 #Код мини-игры(не оптимизированно,много строчек лишних)   
 def yesornotgame(message):
     global gamebutt
+    global markup
     gamebutt = keyboard(resize_keyboard = True)
     buttq1 = "A"
     buttq2 = "B"
