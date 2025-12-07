@@ -1,5 +1,6 @@
-keras
-tensorflow
-sounddevice
-googletranslator
-numpy
+puydub
+requests
+speech_recognition
+для работы требуется FFmpeg
+
+
